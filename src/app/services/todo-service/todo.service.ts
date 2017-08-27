@@ -19,4 +19,12 @@ export class TodoService {
     return delayedResolver(TODOS);
   }
 
+  addTodo(task: string): Promise<Todo> {
+    const todo = new Todo(Math.random(), task);
+    return delayedResolver(todo).then(resolved => {
+      TODOS.push(todo);
+      return resolved;
+    });
+  }
+
 }

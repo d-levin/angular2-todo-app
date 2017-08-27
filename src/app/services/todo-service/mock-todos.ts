@@ -1,8 +1,8 @@
 import { Todo } from '../../classes/todo';
 
 export const TODOS: Todo[] = [
-  { id: 1, task: 'Laundry',  done: false },
-  { id: 2, task: 'Dishes',  done: false },
-  { id: 3, task: 'Homework',  done: false },
-  { id: 4, task: 'Drugs', done: false }
+  { id: 1, task: 'Laundry' },
+  { id: 2, task: 'Dishes' },
+  { id: 3, task: 'Homework' },
+  { id: 4, task: 'Drugs' }
 ];

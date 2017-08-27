@@ -10,6 +10,9 @@ import { TodoService } from './services/todo-service/todo.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  task = '';
+
   todos: Todo[] = [];
 
   get incomplete(): Todo[] { return this.todos.filter(todo => !todo.done); }
@@ -18,7 +21,13 @@ export class AppComponent implements OnInit {
 
   constructor(private todoService: TodoService) { }
 
-  getTodos(): void {
+  add(): void {
+    if (this.task) {
+      this.todoService.addTodo(this.task).then(() => this.task = '');
+    }
+  }
+
+  private getTodos(): void {
     this.todoService.getTodos().then(todos => this.todos = todos);
   }
 
