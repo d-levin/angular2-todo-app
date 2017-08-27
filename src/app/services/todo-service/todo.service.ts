@@ -18,7 +18,7 @@ export class TodoService {
   getTodos(): Promise<Todo[]> { return delayedResolver(TODOS); }
 
   addTodo(task: string): Promise<Todo> {
-    const todo = new Todo(Math.random(), task);
+    const todo = new Todo(Math.floor(Math.random() * Number.MAX_SAFE_INTEGER), task);
     return delayedResolver(todo).then(resolved => {
       TODOS.push(todo);
       return resolved;
