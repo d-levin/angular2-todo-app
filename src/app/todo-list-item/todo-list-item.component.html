@@ -1,6 +1,6 @@
 <div class="input-group">
-  <span class="input-group-btn">
-    <button class="btn btn-secondary" type="button" (click)="toggle()">{{buttonLabel}}</button>
+  <span class="input-group-addon">
+    <input type="checkbox" aria-label="Completed" (click)="toggle()" [checked]="todo.done">
   </span>
   <input
     [ngClass]="{'strike-through' : todo.done}"
