@@ -33,12 +33,10 @@ export class AppComponent implements OnInit {
     }
   }
 
-  private getTodos(): void {
-    this.todoService.getTodos().then(todos => this.todos = todos);
-  }
+  remove(todo: Todo): void { this.todoService.removeTodo(todo); }
 
-  ngOnInit(): void {
-    this.getTodos();
-  }
+  private getTodos(): void { this.todoService.getTodos().then(todos => this.todos = todos); }
+
+  ngOnInit(): void { this.getTodos(); }
 
 }

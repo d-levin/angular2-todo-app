@@ -3,6 +3,7 @@
   <app-todo-list-item
     *ngFor="let todo of todos"
     [todo]="todo"
+    (onRemove)="remove($event)"
     class="list-group-item"
   ></app-todo-list-item>
 </div>

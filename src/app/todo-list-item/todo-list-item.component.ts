@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Todo } from '../classes/todo';
 
@@ -11,7 +11,9 @@ export class TodoListItemComponent {
 
   @Input() todo: Todo;
 
-  get buttonLabel(): string { return this.todo.done ? 'Undo' : 'Done'; }
+  @Output() onRemove = new EventEmitter<Todo>();
+
+  remove(): void { this.onRemove.emit(this.todo); }
 
   toggle(): void { this.todo.done = !this.todo.done; }
 

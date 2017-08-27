@@ -31,7 +31,7 @@
       <app-todo-list title="Incomplete" [todos]="incomplete"></app-todo-list>
     </div>
     <div class="col-lg-6">
-      <app-todo-list title="Completed" [todos]="completed"></app-todo-list>
+      <app-todo-list title="Completed" [todos]="completed" (onRemove)="remove($event)"></app-todo-list>
     </div>
   </div>
 </div>

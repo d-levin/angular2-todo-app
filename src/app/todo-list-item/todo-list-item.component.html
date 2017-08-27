@@ -9,4 +9,9 @@
     class="form-control"
     type="text"
   >
+  <span *ngIf="todo.done" class="input-group-btn">
+    <button class="btn btn-secondary" type="button" (click)="remove()">
+      <span class="fa fa-trash"></span>
+    </button>
+  </span>
 </div>
