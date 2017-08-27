@@ -1,0 +1,12 @@
+<div class="input-group">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button" (click)="toggle()">{{buttonLabel()}}</button>
+  </span>
+  <input
+    [ngClass]="{'strike-through' : todo.done}"
+    [value]="todo.task"
+    aria-label="Todo"
+    class="form-control"
+    type="text"
+  >
+</div>
