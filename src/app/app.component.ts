@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Todo } from './classes/todo';
+import { Todo } from './models/todo';
 
 import { TodoService } from './services/todo-service/todo.service';
 

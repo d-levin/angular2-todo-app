@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Todo } from '../../classes/todo';
+import { Todo } from '../../models/todo';
 
 import { TODOS } from './mock-todos';
 
