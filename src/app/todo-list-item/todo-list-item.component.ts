@@ -11,7 +11,7 @@ export class TodoListItemComponent {
 
   @Input() todo: Todo;
 
-  buttonLabel(): string { return this.todo.done ? 'Undo' : 'Done'; }
+  get buttonLabel(): string { return this.todo.done ? 'Undo' : 'Done'; }
 
   toggle(): void { this.todo.done = !this.todo.done; }
 

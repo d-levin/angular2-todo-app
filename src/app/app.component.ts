@@ -12,9 +12,9 @@ import { TodoService } from './services/todo-service/todo.service';
 export class AppComponent implements OnInit {
   todos: Todo[] = [];
 
-  incomplete(): Todo[] { return this.todos.filter(todo => !todo.done); }
+  get incomplete(): Todo[] { return this.todos.filter(todo => !todo.done); }
 
-  completed(): Todo[] { return this.todos.filter(todo => todo.done); }
+  get completed(): Todo[] { return this.todos.filter(todo => todo.done); }
 
   constructor(private todoService: TodoService) { }
 
