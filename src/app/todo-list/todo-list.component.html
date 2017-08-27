@@ -1,5 +1,5 @@
 <div class="list-group">
-  <h3 *ngIf="title" class="text-center">{{title}}</h3>
+  <h3 *ngIf="title" class="text-center list-group-item">{{title}}</h3>
   <app-todo-list-item
     *ngFor="let todo of todos"
     [todo]="todo"
