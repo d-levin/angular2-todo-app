@@ -19,6 +19,8 @@
           [disabled]="loading"
           type="button"
           (click)="add()"
+          [ngbTooltip]="!task ? 'Todo cannot be empty' : ''"
+          placement="bottom"
         >Add</button>
       </span>
     </div>
