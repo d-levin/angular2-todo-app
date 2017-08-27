@@ -8,10 +8,17 @@
       placeholder="Add todo"
       aria-label="Add todo"
       [(ngModel)]="task"
+      (keyup.enter)="add()"
+      [disabled]="loading"
       required
     >
     <span class="input-group-btn">
-      <button class="btn btn-secondary" type="button" (click)="add()">Add</button>
+      <button
+        class="btn btn-secondary"
+        [disabled]="loading"
+        type="button"
+        (click)="add()"
+      >Add</button>
     </span>
   </div>
 

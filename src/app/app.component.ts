@@ -11,6 +11,8 @@ import { TodoService } from './services/todo-service/todo.service';
 })
 export class AppComponent implements OnInit {
 
+  loading = false;
+
   task = '';
 
   todos: Todo[] = [];
@@ -23,7 +25,11 @@ export class AppComponent implements OnInit {
 
   add(): void {
     if (this.task) {
-      this.todoService.addTodo(this.task).then(() => this.task = '');
+      this.loading = true;
+      this.todoService.addTodo(this.task).then(() => {
+        this.task = '';
+        this.loading = false;
+      });
     }
   }
 
